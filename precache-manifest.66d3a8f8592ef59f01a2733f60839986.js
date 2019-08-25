@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f3842815d4558157b831415b4acb136",
+    "revision": "db98b57dcc30e0e9191b4f4089576900",
     "url": "/material-matters/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/material-matters/static/css/2.60a6b8e0.chunk.css"
   },
   {
-    "revision": "40348920e159f4e8b379",
+    "revision": "d8c04d3f0c7a50b687e9",
     "url": "/material-matters/static/css/main.512d83f9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/material-matters/static/js/2.59c061b9.chunk.js"
   },
   {
-    "revision": "40348920e159f4e8b379",
-    "url": "/material-matters/static/js/main.28618550.chunk.js"
+    "revision": "d8c04d3f0c7a50b687e9",
+    "url": "/material-matters/static/js/main.57dbc3d9.chunk.js"
   },
   {
     "revision": "0c7a19fae65b7bde62f7",
