@@ -15,7 +15,9 @@ export class Images extends Component {
         const { count, start } = this.state;
         console.log("componentDidMount");
         axios
-            .get(`https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get('https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9', function(data) {
+                console.log(data);
+            }) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
         
     }
@@ -26,7 +28,9 @@ export class Images extends Component {
         
         this.setState({start: this.state.start + count});
         axios
-            .get(`https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get('https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9', function(data) {
+                console.log(data);
+            }) 
             .then(res => 
                 this.setState({ images: this.state.images.concat(res.data) })
             );
