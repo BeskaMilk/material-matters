@@ -3,30 +3,19 @@ import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Image from './Image';
 
-//const express = require('express');
-//const app = express();
-
-
-// app.use(function (req, res, next) {
-//     res.setHeader('Access-Control-Allow-Origin', 'https://materialmatters.herokuapp.com/');
-//     res.setHeader('Access-Control-Allow-Origin', 'https://beskamilk.github.io/');
-//     next();
-//   });
-
 export class Images extends Component {
     state= {
         images: [],
         count: 30,
         start: 1
     }
-
-    
+  
 
     componentDidMount(){
         const { count, start } = this.state;
         console.log("componentDidMount");
         axios
-            .get(`https://api.Unsplash.com/api/photos/urn:ietf:wg:oauth:2.0:oob?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get(`https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
         
     }
@@ -37,7 +26,7 @@ export class Images extends Component {
         
         this.setState({start: this.state.start + count});
         axios
-            .get(`https://api.Unsplash.com/api/photos/urn:ietf:wg:oauth:2.0:oob?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get(`https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => 
                 this.setState({ images: this.state.images.concat(res.data) })
             );

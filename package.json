@@ -40,7 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://floating-eyrie-30747.herokuapp.com/",
+  "proxy": "https://localhost:5000/",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
