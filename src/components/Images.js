@@ -6,7 +6,7 @@ import Image from './Image';
 export class Images extends Component {
     state= {
         images: [],
-        count: 30,
+        count: 10,
         start: 1
     }
   
@@ -17,7 +17,8 @@ export class Images extends Component {
         axios
             .get('https://api.Unsplash.com/photos/?client_id=277aa79f642c5f5ad25a6fe715cedf4a24e8a74ce5d9f9f32970f30cdd2908c9', function(data) {
                 console.log(data);
-            }) //.get(`/api/photos?count=${count}&start=${start}`)
+            })
+            //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
         
     }

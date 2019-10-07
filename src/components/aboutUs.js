@@ -5,9 +5,12 @@ import { Footer, FooterSection, FooterDropDownSection, FooterLinkList } from 're
 class AboutUs extends Component{
 	render(){
 		return(
-			<div><h1>Matters is a networking community.</h1>
+			<div>
+			<div className='body-contents'>
+				<h6>Matters is a networking community for architects and designers to share information about architectural and interior materials. </h6>
+				<h6>Suppliers, Construction team, Architects, Interior designers and even the clients can participate and share information. </h6>
 				{/* ----------------- Footer ----------------- */}
-
+			</div>
 				<div className="foot">
 				<Footer size="mega">
 				<FooterSection type="middle">

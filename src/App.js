@@ -1,9 +1,8 @@
 import React, { Component} from 'react';
 import './App.css';
-import { Layout, Header, Navigation, Drawer, Content, Badge, Icon, Footer, FooterSection, FooterDropDownSection, FooterLinkList } from 'react-mdl';
+import { Layout, Header, Navigation, Content, Badge, Icon } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
-import Images from './components/Images';
 import axios from 'axios';
 
 
@@ -26,17 +25,12 @@ class App extends Component{
     return (
       
       <div className="demo-big-content">
-          {/* <Layout>
-           <Header className="header-color" title="Matters" scroll>
-            <Navigation>
-                <Link to="/landingPage">Landing Page</Link>
-                <Link to="/aboutUs">About Us</Link>
-                <Link to="/register">Register</Link>
-                <Link to="/logIn">Log in</Link>
-                <Link to="/loggedInMainPage">Logged in main page</Link>
-                <Link to="/contact">Contact</Link>
-
-                
+          <Layout>
+           <Header className="header-color" title="Matters" scroll style={{color: 'black'}}>
+            <Navigation >
+                <Link style={{color: 'black'}} to="/landingPage">Feed</Link>
+                <Link style={{color: 'black'}} to="/logIn_Register">Log In / Register</Link>
+                <Link style={{color: 'black'}} to="/aboutUs">About</Link>
                 <Badge text="1" overlap>
                     <Icon name="account_box" />
                 </Badge>
@@ -46,13 +40,13 @@ class App extends Component{
 
           <Content>
           <div className="page-content" />
-              <Main/>
+              {/* <Main/> */}
           </Content>
 
-          </Layout> */}
-            <input type= "file" onChange={this.fileSelectedHandler}/>
-            <button onClick={this.fileUploadHandler}>Upload</button>
-            <Images />
+          </Layout>
+                        
+          <Main/>            
+            
       </div>
     );
   }
